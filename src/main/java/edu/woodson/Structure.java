@@ -13,5 +13,6 @@ public class Structure {
 
     public void putNode(Node node) {
         //TODO: implementation for putting nodes
+        nodes.add(node);
     }
 }
