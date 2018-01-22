@@ -1,9 +1,10 @@
-package edu.woodson;
+package edu.woodson.structure.node;
 
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Random;
 import java.util.Set;
+
+import static edu.woodson.Utility.random;
 
 /**
  * @author SirMathhman
@@ -11,8 +12,6 @@ import java.util.Set;
  * @since 1/8/2018
  */
 public class Node {
-    private static final Random random = new Random();
-
     private final Set<Node> connectedNodes = new HashSet<>();
     private final long id = random.nextLong();
     private long weight;

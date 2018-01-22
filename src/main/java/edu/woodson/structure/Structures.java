@@ -1,4 +1,7 @@
-package edu.woodson;
+package edu.woodson.structure;
+
+import edu.woodson.structure.node.Node;
+import edu.woodson.structure.node.binding.NodeBinding;
 
 import java.io.File;
 import java.util.List;
@@ -13,9 +16,13 @@ public class Structures {
     }
 
     public static Structure load(NodeBinding binding) {
+        return load(binding, null);
+    }
+
+    public static Structure load(NodeBinding binding, String name) {
         List<Node> nodes = binding.getNodes();
         List<Long[]> ids = binding.getLinks();
-        Structure structure = new Structure();
+        Structure structure = new Structure(name);
 
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
