@@ -8,17 +8,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class StructuresTest {
     @Test
     void load() {
-
-    }
-
-    @Test
-    void load1() {
         Node test1 = new Node();
         Node test2 = new Node();
         List<Node> nodes = Arrays.asList(
@@ -33,9 +27,29 @@ class StructuresTest {
         Set<Node> structureNodes = structure.getNodes();
 
         assertEquals(2, structureNodes.size());
+        assertNull(structure.getName());
 
-        assertEquals(1, structureNodes.size());
-        assertEquals(1, structureNodes.size());
+        assertTrue(structureNodes.contains(test2));
+        assertTrue(structureNodes.contains(test1));
+    }
+
+    @Test
+    void load1() {
+        Node test1 = new Node();
+        Node test2 = new Node();
+        List<Node> nodes = Arrays.asList(
+                test1,
+                test2);
+        List<Long[]> links = Arrays.asList(
+                new Long[]{1L},
+                new Long[]{0L}
+        );
+
+        Structure structure = Structures.load(new NodeBinding(nodes, links), "test");
+        Set<Node> structureNodes = structure.getNodes();
+
+        assertEquals(2, structureNodes.size());
+        assertEquals("test", structure.getName());
 
         assertTrue(structureNodes.contains(test2));
         assertTrue(structureNodes.contains(test1));

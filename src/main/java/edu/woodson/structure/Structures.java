@@ -30,8 +30,11 @@ public class Structures {
                 throw new IllegalArgumentException("A node in binding cannot contain any connected nodes!");
             }
 
-            for (int j = 0; j < ids.get(j)[i]; j++) {
-                node.addConnectedNode(nodes.get(j));
+            for (int j = 0; j < ids.size(); j++) {
+                Long[] idArray = ids.get(j);
+                for (int k = 0; k < idArray.length; k++) {
+                    node.addConnectedNode(nodes.get(k));
+                }
             }
             structure.putNode(node);
         }

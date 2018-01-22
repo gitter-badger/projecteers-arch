@@ -29,4 +29,8 @@ public class Structure {
     public Set<Node> getNodes() {
         return nodes;
     }
+
+    public String getName() {
+        return name;
+    }
 }
