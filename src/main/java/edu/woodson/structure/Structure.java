@@ -25,4 +25,12 @@ public class Structure {
     public void putNode(Node node) {
         nodes.add(node);
     }
+
+    public Set<Node> getNodes() {
+        return nodes;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
