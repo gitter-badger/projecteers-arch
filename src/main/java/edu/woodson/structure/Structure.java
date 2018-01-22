@@ -5,6 +5,8 @@ import edu.woodson.structure.node.Node;
 import java.util.HashSet;
 import java.util.Set;
 
+import static edu.woodoson.Utility.random;
+
 /**
  * @author SirMathhman
  * @version 0.0.0
@@ -12,6 +14,7 @@ import java.util.Set;
  */
 public class Structure {
     private final Set<Node> nodes = new HashSet<>();
+    private final long id = random.nextLong();
 
     public void putNode(Node node) {
         nodes.add(node);
