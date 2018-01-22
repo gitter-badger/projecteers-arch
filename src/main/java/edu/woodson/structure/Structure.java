@@ -5,7 +5,7 @@ import edu.woodson.structure.node.Node;
 import java.util.HashSet;
 import java.util.Set;
 
-import static edu.woodoson.Utility.random;
+import static edu.woodson.Utility.random;
 
 /**
  * @author SirMathhman

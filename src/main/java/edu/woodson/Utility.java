@@ -1,4 +1,4 @@
-package edu.woodoson;
+package edu.woodson;
 
 import java.util.Random;
 
