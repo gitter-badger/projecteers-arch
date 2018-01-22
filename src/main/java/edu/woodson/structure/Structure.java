@@ -14,7 +14,13 @@ import static edu.woodoson.Utility.random;
  */
 public class Structure {
     private final Set<Node> nodes = new HashSet<>();
+    private final String name;
     private final long id = random.nextLong();
+
+    //declared by factory method
+    public Structure(String name) {
+        this.name = name;
+    }
 
     public void putNode(Node node) {
         nodes.add(node);
