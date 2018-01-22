@@ -1,4 +1,7 @@
-package edu.woodson;
+package edu.woodson.structure;
+
+import edu.woodson.structure.node.Node;
+import edu.woodson.structure.node.binding.NodeBinding;
 
 import java.io.File;
 import java.util.List;

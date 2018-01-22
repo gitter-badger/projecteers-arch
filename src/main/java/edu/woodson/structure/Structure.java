@@ -1,4 +1,6 @@
-package edu.woodson;
+package edu.woodson.structure;
+
+import edu.woodson.structure.node.Node;
 
 import java.util.HashSet;
 import java.util.Set;
