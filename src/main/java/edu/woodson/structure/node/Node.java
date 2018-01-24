@@ -13,11 +13,17 @@ import static edu.woodson.Utility.random;
  */
 public class Node {
     private final Set<Node> connectedNodes = new HashSet<>();
+    private final Position position;
     private final long id = random.nextLong();
     private long weight;
 
-    public Node(Node... connectedNodes) {
+    public Node(int size, Node... connectedNodes) {
         this.connectedNodes.addAll(Arrays.asList(connectedNodes));
+        this.position = new Position(size);
+    }
+
+    public Position getPosition() {
+        return position;
     }
 
     public long getId() {

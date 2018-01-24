@@ -13,8 +13,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class StructuresTest {
     @Test
     void load() {
-        Node test1 = new Node();
-        Node test2 = new Node();
+        Node test1 = new Node(0);
+        Node test2 = new Node(0);
         List<Node> nodes = Arrays.asList(
                 test1,
                 test2);
@@ -35,8 +35,8 @@ class StructuresTest {
 
     @Test
     void load1() {
-        Node test1 = new Node();
-        Node test2 = new Node();
+        Node test1 = new Node(0);
+        Node test2 = new Node(0);
         List<Node> nodes = Arrays.asList(
                 test1,
                 test2);
