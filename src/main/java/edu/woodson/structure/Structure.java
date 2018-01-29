@@ -2,7 +2,6 @@ package edu.woodson.structure;
 
 import edu.woodson.structure.node.Node;
 
-import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -10,8 +9,7 @@ import java.util.Set;
  * @version 0.0.0
  * @since 1/8/2018
  */
-public class Structure {
-    private final Set<Node> nodes = new HashSet<>();
+public abstract class Structure {
     private final String name;
 
     //declared by factory method
@@ -19,15 +17,9 @@ public class Structure {
         this.name = name;
     }
 
-    public void putNode(Node node) {
-        nodes.add(node);
-    }
-
-    public Set<Node> getNodes() {
-        return nodes;
-    }
-
     public String getName() {
         return name;
     }
+
+    public abstract Set<Node> getNodes();
 }

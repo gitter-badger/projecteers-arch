@@ -15,14 +15,14 @@ public class Structures {
     private Structures() {
     }
 
-    public static Structure load(NodeBinding binding) {
+    public static BasicStructure load(NodeBinding binding) {
         return load(binding, null);
     }
 
-    public static Structure load(NodeBinding binding, String name) {
+    public static BasicStructure load(NodeBinding binding, String name) {
         List<Node> nodes = binding.getNodes();
         List<Long[]> ids = binding.getLinks();
-        Structure structure = new Structure(name);
+        BasicStructure structure = new BasicStructure(name);
 
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
@@ -36,6 +36,7 @@ public class Structures {
                     node.addConnectedNode(nodes.get(k));
                 }
             }
+
             structure.putNode(node);
         }
 
