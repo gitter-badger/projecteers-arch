@@ -21,4 +21,8 @@ public class BasicStructure extends Structure {
     public Set<Node> getNodes() {
         return nodes;
     }
+
+    public void putNode(Node node) {
+        nodes.add(node);
+    }
 }
