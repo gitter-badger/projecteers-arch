@@ -16,4 +16,9 @@ public class BasicStructure extends Structure {
     public BasicStructure(String name) {
         super(name);
     }
+
+    @Override
+    public Set<Node> getNodes() {
+        return nodes;
+    }
 }
