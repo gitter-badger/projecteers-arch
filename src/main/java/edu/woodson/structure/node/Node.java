@@ -1,5 +1,7 @@
 package edu.woodson.structure.node;
 
+import edu.woodson.Connectable;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,7 +13,7 @@ import static edu.woodson.Utility.random;
  * @version 0.0.0
  * @since 1/8/2018
  */
-public class Node {
+public class Node implements Connectable<Node> {
     private final Set<Node> connectedNodes = new HashSet<>();
     private final Position position;
     private final long id = random.nextLong();
@@ -47,6 +49,11 @@ public class Node {
     }
 
     public Set<Node> getConnectedNodes() {
+        return connectedNodes;
+    }
+
+    @Override
+    public Set<Node> getConnectables() {
         return connectedNodes;
     }
 }
