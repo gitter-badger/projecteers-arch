@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Arch.iml" filepath="$PROJECT_DIR$/.idea/Arch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/projecteers-arch.iml" filepath="$PROJECT_DIR$/.idea/modules/projecteers-arch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/projecteers-arch_main.iml" filepath="$PROJECT_DIR$/.idea/modules/projecteers-arch_main.iml" group="projecteers-arch" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/projecteers-arch_test.iml" filepath="$PROJECT_DIR$/.idea/modules/projecteers-arch_test.iml" group="projecteers-arch" />
     </modules>
   </component>
 </project>
